@@ -7,18 +7,26 @@ Dark green: #28b485
 
 */
 
-* {
+*, 
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+/* Setting the root font-size in order to make the rest of the page easier to style using 'rem' since it will just be a multiple of 10px- this must the be in turn converted to percentage of default 16px in order for accessibility to work properly and make media queries much easier to write */
+html {
+    font-size: 62.5%; 
+    /* is eaual to 16px */
 }
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 .header {
     position: relative;
@@ -31,15 +39,15 @@ body {
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 }
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
-.logo {
-    height: 35px;
+.header__logo {
+    height: 3.5rem;
 }
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -49,13 +57,13 @@ body {
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
-.heading-primary-main {
+.heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;  
@@ -63,21 +71,21 @@ body {
     animation-timing-function: ease-in;
     animation-iteration-count: 3; */
 }
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 20px;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
     animation: moveInRight 1.5s ease-out;
 }
 /* Key frame animations for header h1 */
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
     100% {
         opacity: 1;
@@ -87,10 +95,10 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
     100% {
         opacity: 1;
@@ -100,7 +108,7 @@ body {
 @keyframes moveBtnUp {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(6rem);
     }
     100% {
         opacity: 1;
@@ -111,21 +119,21 @@ body {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
-    animation: moveBtnUp 1.5s ease-out;
+    font-size: 1.6rem;
 }
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn:active {
     transform: translateY(-1px);
 }
-.btn-white {
+.btn--white {
     background-color: white;
     color: #777;
 }
@@ -141,10 +149,14 @@ body {
     z-index: -1;
     transition: all .4s;
 }
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 .btn:hover::after {
     transform: scalex(1.4) scaleY(1.6);
     opacity: 0;
+}
+.btn--animated {
+    animation: moveBtnUp 1.5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
