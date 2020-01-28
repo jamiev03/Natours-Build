@@ -77,7 +77,20 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485); }
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(28, 28, 28, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -122,14 +135,9 @@ body {
   animation-fill-mode: backwards; }
 
 .row {
-  max-width: 114rem;
-  background-color: #eee;
-  margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-  .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2);
-    background-color: orangered; }
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; }
 
 .header {
   position: relative;
