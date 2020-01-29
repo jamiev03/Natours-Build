@@ -99,8 +99,17 @@ body {
 .u-center-text {
   text-align: center; }
 
+.u-margin-auto {
+  margin: 0 auto; }
+
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -144,10 +153,22 @@ body {
   animation: moveBtnUp 1.5s ease-out .75s;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px; }
+
 .row {
+  max-width: 114rem;
   display: flex;
   justify-content: space-around;
   align-items: flex-start; }
+
+.col-1-of-2 {
+  width: 50%; }
 
 .header {
   position: relative;
