@@ -1,0 +1,13 @@
+.col-1-of-3 {
+    width: 33.33%;
+}
+.cards {
+    background-color: orangered;
+    height: 50rem;
+    transition: all .8s;
+    margin: 3rem;
+
+    &:hover {
+        transform: rotateY(180deg);
+    }
+}
