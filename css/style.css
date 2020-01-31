@@ -241,16 +241,29 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(28, 28, 28, 0.15); }
     .cards__side--front {
-      background-color: orangered; }
+      background-color: #fff; }
     .cards__side--back {
       background-color: blue;
       transform: rotateY(180deg); }
+      .cards__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
   .cards:hover .cards__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .cards:hover .cards__side--back {
     transform: rotateY(0); }
+  .cards__picture {
+    background-size: cover;
+    height: 23rem; }
+    .cards__picture--1 {
+      background-image: url(../img/nat-5.jpg); }
+    .cards__picture--2 {
+      background-image: url(../img/nat-5.img); }
+    .cards__picture--3 {
+      background-image: url(../img/nat-5.img); }
 
 .row {
   max-width: 114rem;
