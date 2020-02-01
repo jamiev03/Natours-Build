@@ -222,7 +222,8 @@ body {
     transform: translateY(-1.5rem) scale(1.02); }
 
 .col-1-of-3 {
-  width: 33.33%; }
+  width: 30%;
+  margin: 1.5rem; }
 
 .cards {
   perspective: 150rem;
@@ -250,6 +251,10 @@ body {
       transform: rotateY(180deg); }
       .cards__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .cards__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .cards__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .cards:hover .cards__side--front {
     transform: rotateY(-180deg); }
   .cards:hover .cards__side--back {
@@ -263,9 +268,9 @@ body {
     .cards__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
     .cards__picture--2 {
-      background-image: url(../img/nat-5.img); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
     .cards__picture--3 {
-      background-image: url(../img/nat-5.img); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
   .cards__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -282,6 +287,10 @@ body {
     box-decoration-break: clone; }
     .cards__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .cards__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .cards__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .cards__details ul {
     list-style: none;
     width: 80%;
@@ -292,11 +301,28 @@ body {
       padding: 1rem; }
       .cards__details ul li:not(:last-child) {
         border-bottom: 1px solid #eee; }
+  .cards__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .cards__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .cards__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .cards__price-value {
+    font-size: 8rem;
+    font-weight: 100; }
 
 .row {
   max-width: 114rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 5px; }
 
