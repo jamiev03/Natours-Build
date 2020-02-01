@@ -277,9 +277,21 @@ body {
     right: 2rem;
     width: 75%; }
   .cards__heading-span {
-    padding: 1rem 1.5rem; }
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
     .cards__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+  .cards__details ul {
+    list-style: none;
+    width: 80%;
+    margin: 1rem auto 0 auto; }
+    .cards__details ul li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem; }
+      .cards__details ul li:not(:last-child) {
+        border-bottom: 1px solid #eee; }
 
 .row {
   max-width: 114rem;
